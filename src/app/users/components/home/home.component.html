@@ -6,13 +6,24 @@
   <mat-grid-list class="hero-grid" cols="2" rowHeight="fit" gutterSize="5px">
     <mat-grid-tile *ngFor="let hero of heroes">
       <mat-card color="primary" class="card" (click)="heroClicked(hero)">
-        <mat-card-title>
+        <mat-card-title class="hero-card-title">
           {{ hero.name }}
         </mat-card-title>
-          <img mat-card-sm-image class="card-image" [src]="hero.image">
-        <!-- <mat-card-content>
-          {{ hero.desc }}
-        </mat-card-content> -->
+        <mat-divider></mat-divider>
+        <img mat-card-sm-image class="card-image" [src]="hero.image" />
+        <mat-card-content class="hero-card-content">
+          <canvas
+            baseChart
+            [datasets]="[
+            { data: [hero.skills[0].power] },
+            { data: [hero.skills[1].power] },
+            { data: [hero.skills[2].power] }
+          ]"
+            [options]="barChartOptions"
+            [chartType]="barChartType"
+          >
+          </canvas>
+        </mat-card-content>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>

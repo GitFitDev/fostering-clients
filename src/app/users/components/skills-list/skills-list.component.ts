@@ -13,12 +13,12 @@ import {slideInAnimation } from '../../../../assets/route-animations';
   animations: [slideInAnimation]
 })
 export class SkillsListComponent implements OnInit {
-  competency: IHero;
+  hero: IHero;
   skills: ISkill[] = [];
 
   constructor(private router: Router, private dataService: DataService) {
-    this.competency = dataService.getSelectedCompetency();
-    this.skills = this.competency.skills;
+    this.hero = dataService.getSelectedCompetency();
+    this.skills = this.hero.skills;
   }
 
   ngOnInit() {
