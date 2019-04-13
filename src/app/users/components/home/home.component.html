@@ -1,24 +1,17 @@
 
-<mat-toolbar [@routeAnimations]="changeState()" color="primary">
+<mat-toolbar color="primary">
   <span>Welcome to the Fostering Assessment!</span>
 </mat-toolbar>
 <div>
   <mat-grid-list class="hero-grid" cols="2" rowHeight="fit" gutterSize="5px">
     <mat-grid-tile *ngFor="let hero of heroes">
-      <mat-card color="primary" class="card" (click)="heroClicked(hero)">
+      <mat-card color="primary" class="card" [@buttonState]="buttonState()" (click)="heroClicked(hero)">
         <mat-card-title>
           {{ hero.name }}
         </mat-card-title>
           <img mat-card-sm-image class="card-image" [src]="hero.image">
-        <!-- <mat-card-content>
-          {{ hero.desc }}
-        </mat-card-content> -->
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
 
-<!-- <app-card-list
-  [cardList]="competencies"
-  (cardClicked)="cardClicked($event)"
-></app-card-list> -->

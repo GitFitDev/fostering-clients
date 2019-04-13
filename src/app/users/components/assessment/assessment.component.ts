@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import {slideInAnimation } from '../../../../assets/route-animations';
-
 import { ISkill } from '../../../shared/models/Skill';
 import { DataService } from '../../../shared/services/data.service';
 
@@ -10,7 +8,7 @@ import { DataService } from '../../../shared/services/data.service';
   selector: 'app-assessment',
   templateUrl: './assessment.component.html',
   styleUrls: ['./assessment.component.scss'],
-  animations: [slideInAnimation]
+  animations: []
 })
 export class AssessmentComponent implements OnInit {
   skill: ISkill;
