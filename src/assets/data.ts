@@ -3,83 +3,156 @@ export const data = {
     {
       id: '0',
       name: 'Iron Man',
-      desc: 'this is a test',
+      desc: 'Engineering',
       image: 'assets/iron-man.png',
       skills: [
         {
           id: '0',
-          title: 'comp 1 skill 1',
-          desc: ' sample desc'
+          title: 'coding',
+          desc: ' Coding!!',
+          power: 40
         },
         {
           id: '1',
-          title: 'comp 1 skill 2',
-          desc: ' sample desc'
+          title: 'iron man skill 2',
+          desc: ' sample desc',
+          power: 79
+        },
+        {
+          id: '2',
+          title: 'iron man skill 2',
+          desc: ' sample desc',
+          power: 64
         }
       ]
     },
     {
       id: '1',
       name: 'Spiderman',
-      desc: 'this is a test',
+      desc: 'Math',
       image: 'assets/spiderman.png',
       skills: [
         {
           id: '0',
-          title: 'comp 2 skill 1',
-          desc: ' sample desc'
+          title: 'Linear Algebra',
+          desc: ' Coding!!',
+          power: 40
+        },
+        {
+          id: '1',
+          title: 'Calculus',
+          desc: ' sample desc',
+          power: 79
+        },
+        {
+          id: '2',
+          title: 'Probability & Statistics',
+          desc: ' sample desc',
+          power: 64
         }
       ]
     },
     {
       id: '2',
       name: 'Storm',
-      desc: 'this is a test',
+      desc: 'Science',
       image: 'assets/storm.png',
       skills: [
         {
           id: '0',
-          title: 'comp 3 skill 1',
-          desc: ' sample desc'
+          title: 'Physics',
+          desc: ' Coding!!',
+          power: 40
+        },
+        {
+          id: '1',
+          title: 'Chemistry',
+          desc: ' sample desc',
+          power: 79
+        },
+        {
+          id: '2',
+          title: 'Biology',
+          desc: ' sample desc',
+          power: 64
         }
       ]
     },
     {
       id: '3',
       name: 'Superman',
-      desc: 'this is a test',
+      desc: 'Language',
       image: 'assets/superman.png',
       skills: [
         {
           id: '0',
-          title: 'comp 4 skill 1',
-          desc: ' sample desc'
+          title: 'French',
+          desc: ' Coding!!',
+          power: 40
+        },
+        {
+          id: '1',
+          title: 'Spanish',
+          desc: ' sample desc',
+          power: 79
+        },
+        {
+          id: '2',
+          title: 'Hebrew',
+          desc: ' sample desc',
+          power: 64
         }
       ]
     },
     {
       id: '4',
       name: 'Starfire',
-      desc: 'this is a test',
+      desc: 'Business',
       image: 'assets/Starfire.png',
       skills: [
         {
           id: '0',
-          title: 'comp 5 skill 1',
-          desc: ' sample desc'
+          title: 'Networking',
+          desc: ' Coding!!',
+          power: 40
+        },
+        {
+          id: '1',
+          title: 'Finance',
+          desc: ' sample desc',
+          power: 79
+        },
+        {
+          id: '2',
+          title: 'Accounting',
+          desc: ' sample desc',
+          power: 64
         }
       ]
     },
     {
       id: '5',
       name: 'Wonder Woman',
-      desc: 'this is a test',
+      desc: 'History',
       image: 'assets/wonderwoman.png',
       skills: [
         {
           id: '0',
-          title: 'comp 6 skill 1',
-          desc: ' sample desc'
+          title: 'World History',
+          desc: ' Coding!!',
+          power: 40
+        },
+        {
+          id: '1',
+          title: 'Economics',
+          desc: ' sample desc',
+          power: 79
+        },
+        {
+          id: '1',
+          title: 'Civics',
+          desc: ' sample desc',
+          power: 64
         }
       ]
     }

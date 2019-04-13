@@ -4,5 +4,6 @@ export interface ISkill {
   id: string;
   title: string;
   desc: string;
-  phases?: IPhase[];
+  power: number;
+  // phases?: IPhase[];
 }
