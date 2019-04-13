@@ -8,11 +8,15 @@ import {MatListModule} from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './users/components/home/home.component';
+import { CardListComponent } from './users/components/card-list/card-list.component';
+import { SkillsListComponent } from './users/components/skills-list/skills-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CardListComponent,
+    SkillsListComponent
   ],
   imports: [
     BrowserModule,

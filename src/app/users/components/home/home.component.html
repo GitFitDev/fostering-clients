@@ -1,13 +1,4 @@
 <div class="container">
   <h1>Welcome to the Fostering Assessment!</h1>
 </div>
-<div class="card-container">
-  <mat-list role="list"class="mat-list">
-    <mat-list-item role="listitem"><mat-card class="competency-card">Competency One</mat-card></mat-list-item>
-    <mat-list-item role="listitem"><mat-card class="competency-card">Competency Two</mat-card></mat-list-item>
-    <mat-list-item role="listitem"><mat-card class="competency-card">Competency Three</mat-card></mat-list-item>
-    <mat-list-item role="listitem"><mat-card class="competency-card">Competency Four</mat-card></mat-list-item>
-    <mat-list-item role="listitem"><mat-card class="competency-card">Competency Five</mat-card></mat-list-item>
-    <mat-list-item role="listitem"><mat-card class="competency-card">Competency Six</mat-card></mat-list-item>
-  </mat-list>
-</div>
+<app-card-list [cardList]="competencies" (cardClicked)="cardClicked($event)"></app-card-list>
