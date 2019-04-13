@@ -8,6 +8,7 @@ import { slideInAnimation } from '../assets/route-animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +38,8 @@ import { AssessmentComponent } from './users/components/assessment/assessment.co
     MatCardModule,
     MatIconModule,
     MatStepperModule,
-    MatDialogModule
+    MatDialogModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

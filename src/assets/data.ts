@@ -1,9 +1,10 @@
 export const data = {
-  competencies: [
+  heroes: [
     {
       id: '0',
-      title: 'competency one',
+      name: 'Iron Man',
       desc: 'this is a test',
+      image: 'assets/iron-man.png',
       skills: [
         {
           id: '0',
@@ -19,8 +20,9 @@ export const data = {
     },
     {
       id: '1',
-      title: 'competency two',
+      name: 'Spiderman',
       desc: 'this is a test',
+      image: 'assets/spiderman.png',
       skills: [
         {
           id: '0',
@@ -31,8 +33,9 @@ export const data = {
     },
     {
       id: '2',
-      title: 'competency three',
+      name: 'Storm',
       desc: 'this is a test',
+      image: 'assets/storm.png',
       skills: [
         {
           id: '0',
@@ -43,8 +46,9 @@ export const data = {
     },
     {
       id: '3',
-      title: 'competency four',
+      name: 'Superman',
       desc: 'this is a test',
+      image: 'assets/superman.png',
       skills: [
         {
           id: '0',
@@ -55,8 +59,9 @@ export const data = {
     },
     {
       id: '4',
-      title: 'competency five',
+      name: 'Starfire',
       desc: 'this is a test',
+      image: 'assets/Starfire.png',
       skills: [
         {
           id: '0',
@@ -67,8 +72,9 @@ export const data = {
     },
     {
       id: '5',
-      title: 'competency six',
+      name: 'Wonder Woman',
       desc: 'this is a test',
+      image: 'assets/wonderwoman.png',
       skills: [
         {
           id: '0',

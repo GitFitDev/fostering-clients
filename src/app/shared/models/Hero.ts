@@ -1,8 +1,9 @@
 import { ISkill } from './Skill';
 
-export interface ICompetency {
+export interface IHero {
   id: string;
-  title: string;
+  name: string;
   desc: string;
+  image: string;
   skills: ISkill[];
 }
