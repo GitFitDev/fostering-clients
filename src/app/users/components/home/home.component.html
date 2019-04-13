@@ -1,0 +1,17 @@
+<div>
+    <div style="display: block">
+      <canvas baseChart
+        [datasets]="doughnutChartDataSets"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType"
+        [options]="doughnutChartOptions"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+      <!-- <canvas baseChart
+        [datasets]="doughnutChartDataSet"
+        [chartType]="doughnutChartType"
+        (onHover)="chartHovered($event)">
+      </canvas> -->
+    </div>
+</div>
