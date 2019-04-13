@@ -1,0 +1,5 @@
+<div class="card-container">
+  <mat-list role="list"class="mat-list">
+    <mat-list-item role="listitem" *ngFor="let card of cardList"><mat-card class="competency-card" (click)="onClick(card)">{{ card.title }}</mat-card></mat-list-item>
+  </mat-list>
+</div>
