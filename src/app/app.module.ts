@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatCardModule} from '@angular/material';
 import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +23,7 @@ import { SkillsListComponent } from './users/components/skills-list/skills-list.
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
     MatButtonModule,
     MatCheckboxModule,
     MatListModule,

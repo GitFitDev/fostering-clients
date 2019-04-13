@@ -19,4 +19,7 @@ export class SkillsListComponent implements OnInit {
   ngOnInit() {
   }
 
+  skillClicked(id) {
+
+  }
 }

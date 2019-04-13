@@ -1,4 +1,7 @@
-<div class="container">
-  <h1>Welcome to the Fostering Assessment!</h1>
-</div>
-<app-card-list [cardList]="competencies" (cardClicked)="cardClicked($event)"></app-card-list>
+<mat-toolbar color="primary">
+  <span>Welcome to the Fostering Assessment!</span>
+</mat-toolbar>
+<app-card-list
+  [cardList]="competencies"
+  (cardClicked)="cardClicked($event)"
+></app-card-list>

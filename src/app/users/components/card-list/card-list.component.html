@@ -1,9 +1,14 @@
 <div class="list-container">
   <mat-list class="list">
-    <mat-card class="list-item" *ngFor="let card of cardList">
-      <mat-card class="card" (click)="onClick(card)">
-        {{ card.title }}
+    <mat-list-item class="list-item" *ngFor="let card of cardList">
+      <mat-card color="primary" class="card" (click)="onClick(card)">
+        <mat-card-title>
+          {{ card.title }}
+        </mat-card-title>
+        <mat-card-content>
+          {{ card.desc }}
+        </mat-card-content>
       </mat-card>
-    </mat-card>
+    </mat-list-item>
   </mat-list>
 </div>
