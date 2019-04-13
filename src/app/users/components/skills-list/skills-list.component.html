@@ -1,1 +1,11 @@
-<app-card-list [cardList]="skills" (cardClicked)="skillClicked($event)"></app-card-list>
+<mat-toolbar color="primary">
+  <span>{{ competency.title }} : Skills</span>
+</mat-toolbar>
+
+<app-card-list
+  [cardList]="skills"
+  (cardClicked)="skillClicked($event)"
+></app-card-list>
+
+<app-fabarrow (fabClick)="goBack()"></app-fabarrow>
+
