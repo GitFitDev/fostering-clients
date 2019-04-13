@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { data } from '../../../../assets/data';
+import { DataService } from '../../../shared/services/data.service';
 
 @Component({
   selector: 'app-skills-list',
@@ -8,18 +9,19 @@ import { data } from '../../../../assets/data';
   styleUrls: ['./skills-list.component.scss']
 })
 export class SkillsListComponent implements OnInit {
-  competencyId: number;
+  competency: any;
   skills: any = [];
 
-  constructor(private route: ActivatedRoute) {
-    this.competencyId = +this.route.snapshot.paramMap.get('id');
-    this.skills = data.competencies.find(comp => comp.id === this.competencyId).skills;
+  constructor(private router: Router, private dataService: DataService) {
+    this.competency = dataService.getSelectedCompetency();
+    this.skills = this.competency.skills;
   }
 
   ngOnInit() {
   }
 
-  skillClicked(id) {
-
+  skillClicked(skill) {
+    this.dataService.setSelectedSkill(skill);
+    this.router.navigate(['/assessment']);
   }
 }

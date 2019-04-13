@@ -4,32 +4,39 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatCardModule} from '@angular/material';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { slider } from '../assets/route-animations'
+import { slider } from '../assets/route-animations';
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatStepperModule} from '@angular/material/stepper';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './users/components/home/home.component';
 import { CardListComponent } from './users/components/card-list/card-list.component';
 import { SkillsListComponent } from './users/components/skills-list/skills-list.component';
+import { FABArrowComponent } from './shared/components/fabarrow/fabarrow.component';
+import { AssessmentComponent } from './users/components/assessment/assessment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CardListComponent,
-    SkillsListComponent
+    SkillsListComponent,
+    FABArrowComponent,
+    AssessmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    slider,
     MatToolbarModule,
     MatButtonModule,
     MatCheckboxModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

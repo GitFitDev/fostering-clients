@@ -13,7 +13,8 @@ export class CardListComponent implements OnInit {
   ngOnInit() {
   }
 
+  // emits the object representing the card
   onClick(card) {
-    this.cardClicked.emit(card.id);
+    this.cardClicked.emit(card);
   }
 }
