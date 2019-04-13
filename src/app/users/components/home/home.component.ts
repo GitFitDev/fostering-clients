@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { data } from '../../../../assets/data';
-import { ICompetency } from '../../../shared/models/Competency';
+import { IHero } from '../../../shared/models/Hero';
 import { DataService } from '../../../shared/services/data.service';
 import {slideInAnimation } from '../../../../assets/route-animations';
 
@@ -15,21 +15,22 @@ import {slideInAnimation } from '../../../../assets/route-animations';
   animations: [slideInAnimation]
 })
 export class HomeComponent implements OnInit {
-  competencies: ICompetency[];
   currentState = 'initial';
 
 changeState() {
   this.currentState = this.currentState === 'initial' ? 'final' : 'initial';
 }
 
+  heroes: IHero[];
+
   constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
-    this.competencies = this.dataService.getCompetencies();
+    this.heroes = this.dataService.getCompetencies();
   }
 
-  cardClicked(competency: ICompetency) {
-    this.dataService.setSelectedCompetency(competency);
+  heroClicked(hero: IHero) {
+    this.dataService.setSelectedCompetency(hero);
     this.router.navigate(['/skills']);
   }
 }

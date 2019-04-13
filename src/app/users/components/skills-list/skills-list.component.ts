@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ICompetency } from '../../../shared/models/Competency';
+import { IHero } from '../../../shared/models/Hero';
 import { ISkill } from '../../../shared/models/Skill';
 import { DataService } from '../../../shared/services/data.service';
 import {slideInAnimation } from '../../../../assets/route-animations';
@@ -13,7 +13,7 @@ import {slideInAnimation } from '../../../../assets/route-animations';
   animations: [slideInAnimation]
 })
 export class SkillsListComponent implements OnInit {
-  competency: ICompetency;
+  competency: IHero;
   skills: ISkill[] = [];
 
   constructor(private router: Router, private dataService: DataService) {
