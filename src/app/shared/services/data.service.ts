@@ -1,32 +1,35 @@
 import { Injectable } from '@angular/core';
+
 import { data } from '../../../assets/data';
+import { ICompetency } from '../models/Competency';
+import { ISkill } from '../models/Skill';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private selectedCompetency = {};
-  private selectedSkill = {};
+  private selectedCompetency: ICompetency;
+  private selectedSkill: ISkill;
 
   constructor() { }
 
-  getCompetencies() {
+  getCompetencies(): ICompetency[] {
     return data.competencies;
   }
 
-  getSelectedCompetency() {
+  getSelectedCompetency(): ICompetency {
     return this.selectedCompetency;
   }
 
-  setSelectedCompetency(competency) {
+  setSelectedCompetency(competency): void {
     this.selectedCompetency = competency;
   }
 
-  getSelectedSkill() {
+  getSelectedSkill(): ISkill {
     return this.selectedSkill;
   }
 
-  setSelectedSkill(skill) {
+  setSelectedSkill(skill): void {
     this.selectedSkill = skill;
   }
 }

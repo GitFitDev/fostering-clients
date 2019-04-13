@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { ICompetency } from '../../../shared/models/Competency';
+import { ISkill } from '../../../shared/models/Skill';
 import { DataService } from '../../../shared/services/data.service';
 
 @Component({
@@ -8,8 +11,8 @@ import { DataService } from '../../../shared/services/data.service';
   styleUrls: ['./skills-list.component.scss']
 })
 export class SkillsListComponent implements OnInit {
-  competency: any;
-  skills: any = [];
+  competency: ICompetency;
+  skills: ISkill[] = [];
 
   constructor(private router: Router, private dataService: DataService) {
     this.competency = dataService.getSelectedCompetency();
@@ -19,7 +22,7 @@ export class SkillsListComponent implements OnInit {
   ngOnInit() {
   }
 
-  skillClicked(skill) {
+  skillClicked(skill: ISkill) {
     this.dataService.setSelectedSkill(skill);
     this.router.navigate(['/assessment']);
   }
