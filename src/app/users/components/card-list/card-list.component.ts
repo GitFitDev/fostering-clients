@@ -8,7 +8,7 @@ import {slideInAnimation } from '../../../../assets/route-animations';
   animations: [slideInAnimation]
 })
 export class CardListComponent implements OnInit {
-  @Input() cardList: [];
+  @Input() cardList: any[];
   @Output() cardClicked: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
@@ -16,7 +16,7 @@ export class CardListComponent implements OnInit {
   }
 
   // emits the object representing the card
-  onClick(card) {
+  onClick(card: any) {
     this.cardClicked.emit(card);
   }
 }

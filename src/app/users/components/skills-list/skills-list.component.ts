@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { data } from '../../../../assets/data';
+
+import { ICompetency } from '../../../shared/models/Competency';
+import { ISkill } from '../../../shared/models/Skill';
 import { DataService } from '../../../shared/services/data.service';
 import {slideInAnimation } from '../../../../assets/route-animations';
 
@@ -11,8 +13,8 @@ import {slideInAnimation } from '../../../../assets/route-animations';
   animations: [slideInAnimation]
 })
 export class SkillsListComponent implements OnInit {
-  competency: any;
-  skills: any = [];
+  competency: ICompetency;
+  skills: ISkill[] = [];
 
   constructor(private router: Router, private dataService: DataService) {
     this.competency = dataService.getSelectedCompetency();
@@ -22,10 +24,12 @@ export class SkillsListComponent implements OnInit {
   ngOnInit() {
   }
 
-  skillClicked(skill) {
+  skillClicked(skill: ISkill) {
     this.dataService.setSelectedSkill(skill);
     this.router.navigate(['/assessment']);
   }
 
-  
+  goBack() {
+    this.router.navigate(['/home']);
+  }
 }

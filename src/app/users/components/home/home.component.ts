@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { data } from '../../../../assets/data';
+import { ICompetency } from '../../../shared/models/Competency';
 import { DataService } from '../../../shared/services/data.service';
 import {slideInAnimation } from '../../../../assets/route-animations';
 
@@ -14,7 +15,7 @@ import {slideInAnimation } from '../../../../assets/route-animations';
   animations: [slideInAnimation]
 })
 export class HomeComponent implements OnInit {
-  competencies;
+  competencies: ICompetency[];
 
   constructor(private router: Router, private dataService: DataService) { }
 
@@ -22,7 +23,7 @@ export class HomeComponent implements OnInit {
     this.competencies = this.dataService.getCompetencies();
   }
 
-  cardClicked(competency) {
+  cardClicked(competency: ICompetency) {
     this.dataService.setSelectedCompetency(competency);
     this.router.navigate(['/skills']);
   }
