@@ -5,6 +5,7 @@ export const data = {
       name: 'Iron Man',
       desc: 'Engineering',
       image: 'assets/iron-man.png',
+      isSelected: false,
       skills: [
         {
           id: '0',
@@ -31,6 +32,7 @@ export const data = {
       name: 'Wonder Woman',
       desc: 'History',
       image: 'assets/wonderwoman.png',
+      isSelected: false,
       skills: [
         {
           id: '0',
@@ -57,6 +59,7 @@ export const data = {
       name: 'Storm',
       desc: 'Science',
       image: 'assets/storm.png',
+      isSelected: false,
       skills: [
         {
           id: '0',
@@ -83,6 +86,7 @@ export const data = {
       name: 'Superman',
       desc: 'Language',
       image: 'assets/superman.png',
+      isSelected: false,
       skills: [
         {
           id: '0',
@@ -109,6 +113,7 @@ export const data = {
       name: 'Spiderman',
       desc: 'Math',
       image: 'assets/spiderman.png',
+      isSelected: false,
       skills: [
         {
           id: '0',
@@ -135,6 +140,7 @@ export const data = {
       name: 'Starfire',
       desc: 'Business',
       image: 'assets/Starfire.png',
+      isSelected: false,
       skills: [
         {
           id: '0',

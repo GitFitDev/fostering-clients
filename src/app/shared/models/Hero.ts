@@ -6,4 +6,5 @@ export interface IHero {
   desc: string;
   image: string;
   skills: ISkill[];
+  isSelected?: boolean;
 }

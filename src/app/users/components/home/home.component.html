@@ -1,10 +1,10 @@
-<mat-toolbar [@routeAnimations]="changeState()" color="primary">
+<mat-toolbar color="primary">
   <span>Be Your Hero</span>
 </mat-toolbar>
 <div>
   <mat-grid-list class="hero-grid" cols="2" rowHeight="fit" gutterSize="5px">
-    <mat-grid-tile *ngFor="let hero of heroes">
-      <mat-card color="primary" class="card" (click)="heroClicked(hero)">
+    <mat-grid-tile *ngFor="let hero of heroes" [@expanded]="hero.isSelected ? 'expanded' : 'normal'">
+      <mat-card class="card" (click)="heroClicked(hero)">
         <mat-card-title class="hero-card-title">
           {{ hero.name }}
         </mat-card-title>
@@ -14,10 +14,10 @@
           <canvas
             baseChart
             [datasets]="[
-            { data: [hero.skills[0].power] },
-            { data: [hero.skills[1].power] },
-            { data: [hero.skills[2].power] }
-          ]"
+              { data: [hero.skills[0].power] },
+              { data: [hero.skills[1].power] },
+              { data: [hero.skills[2].power] }
+            ]"
             [options]="barChartOptions"
             [chartType]="barChartType"
           >
@@ -27,4 +27,3 @@
     </mat-grid-tile>
   </mat-grid-list>
 </div>
-
