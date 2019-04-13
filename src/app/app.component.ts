@@ -10,4 +10,7 @@ import { slideInAnimation } from '../assets/route-animations';
 })
 export class AppComponent {
   title = 'fostering-client';
+  prepareRoute(outlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
 }

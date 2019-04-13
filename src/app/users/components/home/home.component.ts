@@ -16,6 +16,11 @@ import {slideInAnimation } from '../../../../assets/route-animations';
 })
 export class HomeComponent implements OnInit {
   competencies: ICompetency[];
+  currentState = 'initial';
+
+changeState() {
+  this.currentState = this.currentState === 'initial' ? 'final' : 'initial';
+}
 
   constructor(private router: Router, private dataService: DataService) { }
 
