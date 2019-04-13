@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { data } from '../../../../assets/data';
 import { DataService } from '../../../shared/services/data.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-assessment',
@@ -9,14 +9,19 @@ import { DataService } from '../../../shared/services/data.service';
   styleUrls: ['./assessment.component.scss']
 })
 export class AssessmentComponent implements OnInit {
-
   skill: any;
 
-  constructor(private dataService: DataService, private router: Router) {
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    public dialog: MatDialog
+  ) {
     this.skill = this.dataService.getSelectedSkill();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  goBack() {
+    this.router.navigate(['/skills']);
+  }
 }

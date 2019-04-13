@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { data } from '../../../../assets/data';
 import { DataService } from '../../../shared/services/data.service';
 
 @Component({
@@ -23,5 +22,9 @@ export class SkillsListComponent implements OnInit {
   skillClicked(skill) {
     this.dataService.setSelectedSkill(skill);
     this.router.navigate(['/assessment']);
+  }
+
+  goBack() {
+    this.router.navigate(['/home']);
   }
 }
