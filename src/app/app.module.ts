@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatCardModule} from '@angular/material';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { slider } from '../assets/route-animations'
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +24,7 @@ import { SkillsListComponent } from './users/components/skills-list/skills-list.
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    slider,
     MatToolbarModule,
     MatButtonModule,
     MatCheckboxModule,
