@@ -14,6 +14,6 @@ export class CardListComponent implements OnInit {
   }
 
   onClick(card) {
-    this.cardClicked.emit(card.title);
+    this.cardClicked.emit(card.id);
   }
 }
