@@ -28,25 +28,25 @@ export const data = {
     },
     {
       id: '1',
-      name: 'Spiderman',
-      desc: 'Math',
-      image: 'assets/spiderman.png',
+      name: 'Wonder Woman',
+      desc: 'History',
+      image: 'assets/wonderwoman.png',
       skills: [
         {
           id: '0',
-          title: 'Linear Algebra',
+          title: 'World History',
           desc: ' Coding!!',
           power: 40
         },
         {
           id: '1',
-          title: 'Calculus',
+          title: 'Economics',
           desc: ' sample desc',
           power: 79
         },
         {
-          id: '2',
-          title: 'Probability & Statistics',
+          id: '1',
+          title: 'Civics',
           desc: ' sample desc',
           power: 64
         }
@@ -106,6 +106,32 @@ export const data = {
     },
     {
       id: '4',
+      name: 'Spiderman',
+      desc: 'Math',
+      image: 'assets/spiderman.png',
+      skills: [
+        {
+          id: '0',
+          title: 'Linear Algebra',
+          desc: ' Coding!!',
+          power: 40
+        },
+        {
+          id: '1',
+          title: 'Calculus',
+          desc: ' sample desc',
+          power: 79
+        },
+        {
+          id: '2',
+          title: 'Probability & Statistics',
+          desc: ' sample desc',
+          power: 64
+        }
+      ]
+    },
+    {
+      id: '5',
       name: 'Starfire',
       desc: 'Business',
       image: 'assets/Starfire.png',
@@ -129,32 +155,6 @@ export const data = {
           power: 64
         }
       ]
-    },
-    {
-      id: '5',
-      name: 'Wonder Woman',
-      desc: 'History',
-      image: 'assets/wonderwoman.png',
-      skills: [
-        {
-          id: '0',
-          title: 'World History',
-          desc: ' Coding!!',
-          power: 40
-        },
-        {
-          id: '1',
-          title: 'Economics',
-          desc: ' sample desc',
-          power: 79
-        },
-        {
-          id: '1',
-          title: 'Civics',
-          desc: ' sample desc',
-          power: 64
-        }
-      ]
     }
   ]
-}
+};
