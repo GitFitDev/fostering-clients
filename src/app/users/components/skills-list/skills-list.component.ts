@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { data } from '../../../../assets/data';
 
 @Component({
@@ -8,12 +8,13 @@ import { data } from '../../../../assets/data';
   styleUrls: ['./skills-list.component.scss']
 })
 export class SkillsListComponent implements OnInit {
-  competencyId: number;
+  competency: any;
   skills: any = [];
 
-  constructor(private route: ActivatedRoute) {
-    this.competencyId = +this.route.snapshot.paramMap.get('id');
-    this.skills = data.competencies.find(comp => comp.id === this.competencyId).skills;
+  constructor(private route: ActivatedRoute, private router: Router) {
+    const competencyId = +this.route.snapshot.paramMap.get('id');
+    this.competency = data.competencies.find(comp => comp.id === competencyId);
+    this.skills = this.competency.skills;
   }
 
   ngOnInit() {
@@ -21,5 +22,9 @@ export class SkillsListComponent implements OnInit {
 
   skillClicked(id) {
 
+  }
+
+  goBack() {
+    this.router.navigate(['/home']);
   }
 }
