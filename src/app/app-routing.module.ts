@@ -8,9 +8,9 @@ import { AssessmentComponent } from './users/components/assessment/assessment.co
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent},
-  { path: 'skills', component: SkillsListComponent},
-  { path: 'assessment', component: AssessmentComponent }
+  { path: 'home', component: HomeComponent, data: {animations: 'home'}},
+  { path: 'skills', component: SkillsListComponent, data: {animations: 'skills'}},
+  { path: 'assessment', component: AssessmentComponent, data: {animations: 'assessments'}}
 ];
 
 @NgModule({

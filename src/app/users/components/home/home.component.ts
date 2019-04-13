@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { data } from '../../../../assets/data';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 import { DataService } from '../../../shared/services/data.service';
+import {slideInAnimation } from '../../../../assets/route-animations';
+
+
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [slideInAnimation]
 })
 export class HomeComponent implements OnInit {
   competencies;

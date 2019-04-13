@@ -1,9 +1,11 @@
 import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
+import {slideInAnimation } from '../../../../assets/route-animations';
 
 @Component({
   selector: 'app-card-list',
   templateUrl: './card-list.component.html',
-  styleUrls: ['./card-list.component.scss']
+  styleUrls: ['./card-list.component.scss'],
+  animations: [slideInAnimation]
 })
 export class CardListComponent implements OnInit {
   @Input() cardList: [];

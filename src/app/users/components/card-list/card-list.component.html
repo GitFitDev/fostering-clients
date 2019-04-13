@@ -1,4 +1,4 @@
-<div class="list-container">
+<div class="list-container" @routeAnimations>
   <mat-list class="list">
     <mat-list-item class="list-item" *ngFor="let card of cardList">
       <mat-card color="primary" class="card" (click)="onClick(card)">
