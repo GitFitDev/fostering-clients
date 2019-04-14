@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -9,7 +10,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fostering-client';
-  prepareRoute(outlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-  }
 }

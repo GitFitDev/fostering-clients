@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {MatDialog} from '@angular/material'
 
+
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -24,6 +25,5 @@ password: string;
   //     alert("Invalid credentials");
   //   }
   // }
-  // }
+  }
 
-}

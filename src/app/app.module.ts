@@ -26,6 +26,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDatepickerModule} from  '@angular/material/datepicker';
 import { RegistrationComponent } from './users/registration/registration.component';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 
 @NgModule({
@@ -61,8 +63,7 @@ import { RegistrationComponent } from './users/registration/registration.compone
     MatFormFieldModule,
     MatProgressSpinnerModule,
     MatDatepickerModule,
-    LoginComponent,
-    RegistrationComponent
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
