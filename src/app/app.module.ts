@@ -4,9 +4,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
+import { FIREBASE_CONFIG } from './app.firebase.config';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database-deprecated';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
+import { AuthService } from '../app/shared/services/auth.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './users/components/home/home.component';
 import { CardListComponent } from './users/components/card-list/card-list.component';
@@ -39,13 +45,17 @@ import { SupportTools2Component } from './users/components/support-tools2/suppor
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     ChartsModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -11,7 +11,7 @@ import { BattleMenuComponent } from './users/components/battle-menu/battle-menu.
 import { SupportTools2Component } from './users/components/support-tools2/support-tools2.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/landingPage', pathMatch: 'full' },
   { path: 'landingPage', component: LandingPageComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
