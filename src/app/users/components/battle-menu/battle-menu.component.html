@@ -1,3 +1,14 @@
-<p>
-  battle-menu works!
-</p>
+<mat-list role="list">
+  <mat-list-item *ngFor="let friend of friends" role="listitem">
+      <img matListAvatar [src]="friend.profileImage">
+      <h4 matLine>{{ friend.username }}</h4>
+      <p matLine>{{ friend.level }}</p>
+      <p matLine>Using: {{ friend.heroForBattle }}</p>
+      <!-- <button mat-fab>Basic</button> -->
+      <button mat-fab color="warn">
+        <mat-icon svgIcon="battle"></mat-icon>
+      </button>
+  </mat-list-item>
+</mat-list>
+
+<app-fabarrow (fabClick)="goBack()"></app-fabarrow>

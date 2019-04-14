@@ -9,7 +9,7 @@ import { RegistrationComponent } from './users/components/registration/registrat
 import { BattleMenuComponent } from './users/components/battle-menu/battle-menu.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/landingPage', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'landingPage', component: LandingPageComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
