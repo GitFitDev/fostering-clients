@@ -4,15 +4,25 @@
 
 <div class="container">
   <img class="hero-image" [src]="hero.image" />
+  <button
+    mat-flat-button
+    color="primary-dark"
+    class="battle-button"
+    (click)="battleButtonClicked()"
+  >
+    BATTLE!
+  </button>
 
   <mat-tab-group mat-stretch-tabs>
     <mat-tab class="tab" *ngFor="let skill of skills" label="{{ skill.title }}">
-        <canvas baseChart
-        [datasets]="[ { data: skill.dataPoints, label: 'Strength' } ]"
+      <canvas
+        baseChart
+        [datasets]="[{ data: skill.dataPoints, label: 'Strength' }]"
         [labels]="lineChartLabels"
         [options]="lineChartOptions"
         [colors]="lineChartColors"
-        [chartType]="lineChartType"></canvas>
+        [chartType]="lineChartType"
+      ></canvas>
     </mat-tab>
     <mat-divider></mat-divider>
   </mat-tab-group>

@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Location } from '@angular/common';
+
 import { Router } from '@angular/router';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, BaseChartDirective, Label } from 'ng2-charts';
@@ -18,10 +20,18 @@ export class SkillsListComponent implements OnInit {
   skills: ISkill[] = [];
 
   public lineChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40] },
+    { data: [65, 59, 80, 81, 56, 55, 40] }
   ];
-  public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  public lineChartOptions: (ChartOptions & { annotation: any }) = {
+  public lineChartLabels: Label[] = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July'
+  ];
+  public lineChartOptions: ChartOptions & { annotation: any } = {
     responsive: true,
     legend: {
       display: false
@@ -34,10 +44,10 @@ export class SkillsListComponent implements OnInit {
           id: 'y-axis-0',
           position: 'left',
           gridLines: {
-            color: 'rgba(255,0,0,0.3)',
+            color: 'rgba(255,0,0,0.3)'
           },
           ticks: {
-            fontColor: 'red',
+            fontColor: 'red'
           }
         }
       ]
@@ -56,12 +66,13 @@ export class SkillsListComponent implements OnInit {
             fontColor: 'orange',
             content: 'LineAnno'
           }
-        },
-      ],
-    },
+        }
+      ]
+    }
   };
   public lineChartColors: Color[] = [
-    { // grey
+    {
+      // grey
       backgroundColor: 'rgba(148,159,177,0.2)',
       borderColor: 'rgba(148,159,177,1)',
       pointBackgroundColor: 'rgba(148,159,177,1)',
@@ -69,7 +80,8 @@ export class SkillsListComponent implements OnInit {
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(148,159,177,0.8)'
     },
-    { // dark grey
+    {
+      // dark grey
       backgroundColor: 'rgba(77,83,96,0.2)',
       borderColor: 'rgba(77,83,96,1)',
       pointBackgroundColor: 'rgba(77,83,96,1)',
@@ -77,7 +89,8 @@ export class SkillsListComponent implements OnInit {
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(77,83,96,1)'
     },
-    { // red
+    {
+      // red
       backgroundColor: 'rgba(255,0,0,0.3)',
       borderColor: 'red',
       pointBackgroundColor: 'rgba(148,159,177,1)',
@@ -90,13 +103,16 @@ export class SkillsListComponent implements OnInit {
 
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
-  constructor(private router: Router, private dataService: DataService) {
+  constructor(
+    private router: Router,
+    private dataService: DataService,
+    private _location: Location
+  ) {
     this.hero = dataService.getSelectedCompetency();
     this.skills = this.hero.skills;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   skillClicked(skill: ISkill) {
     this.dataService.setSelectedSkill(skill);
@@ -104,7 +120,9 @@ export class SkillsListComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/home']);
+    this._location.back();
   }
-
+  battleButtonClicked() {
+    this.router.navigate(['/battle-menu']);
+  }
 }

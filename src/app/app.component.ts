@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [ ]
+  animations: []
+
+
 })
 export class AppComponent {
-  title = 'fostering-client';
+  constructor(
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer
+  ) {
+    matIconRegistry.addSvgIcon(
+      'battle',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/superpower.svg')
+    );
+  }
 }
