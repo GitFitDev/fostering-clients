@@ -27,7 +27,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDatepickerModule} from  '@angular/material/datepicker';
 import { RegistrationComponent } from './users/registration/registration.component';
 import {MatRadioModule} from '@angular/material/radio';
-
+import { BattleMenuComponent } from './users/components/battle-menu/battle-menu.component';
 
 
 @NgModule({
@@ -40,7 +40,8 @@ import {MatRadioModule} from '@angular/material/radio';
     AssessmentComponent,
     LandingPageComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    BattleMenuComponent
   ],
   imports: [
     BrowserModule,

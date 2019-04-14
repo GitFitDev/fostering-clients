@@ -107,4 +107,7 @@ export class SkillsListComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  battleButtonClicked() {
+    this.router.navigate(['/battle-menu']);
+  }
 }
