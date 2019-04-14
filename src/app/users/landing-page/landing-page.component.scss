@@ -1,24 +1,11 @@
 .container {
-  background: url("assets/superheroes-background-4.jpg"); 
+  image:url("../assets/gifs/market-demo.gif") !important;
+  background-size:contain  !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed  !important;
+  background-position: center !important;
 }
-img.background-page {
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
- .mat-app-background {
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+
 
 .spacer {
   flex: 1 1 auto;
