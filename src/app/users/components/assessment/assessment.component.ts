@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ISkill } from '../../../shared/models/Skill';
@@ -16,7 +17,8 @@ export class AssessmentComponent implements OnInit {
   constructor(
     private dataService: DataService,
     private router: Router,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private _location: Location
   ) {
     this.skill = this.dataService.getSelectedSkill();
   }
@@ -24,6 +26,6 @@ export class AssessmentComponent implements OnInit {
   ngOnInit() {}
 
   goBack() {
-    this.router.navigate(['/skills']);
+    this._location.back();
   }
 }
