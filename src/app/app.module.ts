@@ -26,7 +26,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDatepickerModule} from  '@angular/material/datepicker';
 import { RegistrationComponent } from './users/registration/registration.component';
-
+import { BattleMenuComponent } from './users/components/battle-menu/battle-menu.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { RegistrationComponent } from './users/registration/registration.compone
     AssessmentComponent,
     LandingPageComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    BattleMenuComponent
   ],
   imports: [
     BrowserModule,
