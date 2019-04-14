@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
@@ -17,6 +17,7 @@ import { LandingPageComponent } from './users/components/landing-page/landing-pa
 import { LoginComponent } from './users/components/login/login.component';
 import { RegistrationComponent } from './users/components/registration/registration.component';
 import { BattleMenuComponent } from './users/components/battle-menu/battle-menu.component';
+import { SupportTools2Component } from './users/components/support-tools2/support-tools2.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BattleMenuComponent } from './users/components/battle-menu/battle-menu.
     LandingPageComponent,
     LoginComponent,
     RegistrationComponent,
-    BattleMenuComponent
+    BattleMenuComponent,
+    SupportTools2Component
   ],
   imports: [
     BrowserModule,

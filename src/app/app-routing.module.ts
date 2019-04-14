@@ -7,6 +7,7 @@ import { AssessmentComponent } from './users/components/assessment/assessment.co
 import { LoginComponent } from './users/components/login/login.component';
 import { RegistrationComponent } from './users/components/registration/registration.component';
 import { BattleMenuComponent } from './users/components/battle-menu/battle-menu.component';
+import { SupportTools2Component } from './users/components/support-tools2/support-tools2.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,7 +17,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'skills', component: SkillsListComponent },
   { path: 'assessment', component: AssessmentComponent },
-  { path: 'battle-menu', component: BattleMenuComponent }
+  { path: 'battle-menu', component: BattleMenuComponent },
+  { path: 'support-tools', component: SupportTools2Component },
+
 ];
 
 @NgModule({
