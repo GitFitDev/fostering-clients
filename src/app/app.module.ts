@@ -24,6 +24,8 @@ import { LoginComponent } from './users/components/login/login.component';
 import { RegistrationComponent } from './users/components/registration/registration.component';
 import { BattleMenuComponent } from './users/components/battle-menu/battle-menu.component';
 import { SupportTools2Component } from './users/components/support-tools2/support-tools2.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -37,8 +39,7 @@ import { SupportTools2Component } from './users/components/support-tools2/suppor
     LoginComponent,
     RegistrationComponent,
     BattleMenuComponent,
-    SupportTools2Component
-
+    SupportTools2Component,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +53,8 @@ import { SupportTools2Component } from './users/components/support-tools2/suppor
     ChartsModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 
   ],
   providers: [AuthService],

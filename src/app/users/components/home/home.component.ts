@@ -5,7 +5,8 @@ import { Label } from 'ng2-charts';
 import { data } from '../../../../assets/data';
 import { IHero } from '../../../shared/models/Hero';
 import { DataService } from '../../../shared/services/data.service';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger, state, style, animate, transition, useAnimation } from '@angular/animations';
+// import { zoomOut } from 'ng-animate/lib/zooming';
 
 
 @Component({
@@ -19,7 +20,8 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         style({height: '{{startHeight}}px', opacity: 0}),
         animate('.5s ease'),
       ], {params: {startHeight: 0}})
-    ])
+    ]),
+    // trigger('zoomOut', [transition('* => *', useAnimation(zoomOut))])
   ]
 })
 export class HomeComponent implements OnInit {
