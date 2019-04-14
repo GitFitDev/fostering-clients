@@ -20,4 +20,8 @@ export class LandingPageComponent implements OnInit {
   goToRegistration() {
     this.router.navigate(['/registration']);
   }
+
+  goToHome() {
+    this.router.navigate(['/home']);
+  }
 }

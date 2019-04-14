@@ -1,6 +1,12 @@
-
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="spacer"></span>
+    <span><button mat-button (click)="goToLogin()">Login</button></span>
+    <span><button mat-button (click)="goToRegistration()">Register</button></span>
+  </mat-toolbar-row>
+</mat-toolbar>
 <div class="mat-app-background">
 </div>
- <h1 contenteditable data-heading="Minerva">
+ <h1 contenteditable data-heading="Minerva" (click)="goToHome()">
     Minerva
   </h1>
