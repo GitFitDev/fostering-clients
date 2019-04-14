@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import {MatDialog} from '@angular/material'
+import { Router, ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -9,21 +9,31 @@ import {MatDialog} from '@angular/material'
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  loginForm: FormGroup;
+  loading = false;
+  submitted = false;
 
-  constructor() { }
-
-username: string;
-password: string;
+  constructor(
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+  });
   }
+  // convenience getter for easy access to form fields
+  get f() { return this.loginForm.controls; }
 
-  // login() : void {
-  //   if(this.username == 'admin' && this.password == 'admin'){
-  //    this.router.navigate(["user"]);
-  //   }else {
-  //     alert("Invalid credentials");
-  //   }
-  // }
+  onSubmit() {
+    this.submitted = true;
+    // stop here if form is invalid
+    if (this.loginForm.invalid) {
+      return;
   }
-
+  }
+  
+}

@@ -11,7 +11,7 @@ import { SkillsListComponent } from './users/components/skills-list/skills-list.
 import { FABArrowComponent } from './shared/components/fabarrow/fabarrow.component';
 import { AssessmentComponent } from './users/components/assessment/assessment.component';
 import { LandingPageComponent } from './users/landing-page/landing-page.component';
-import {MatButtonModule, MatCheckboxModule, MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatCardModule, MatNativeDateModule} from '@angular/material';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -63,7 +63,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatFormFieldModule,
     MatProgressSpinnerModule,
     MatDatepickerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
