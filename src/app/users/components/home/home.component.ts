@@ -5,7 +5,8 @@ import { Label } from 'ng2-charts';
 import { data } from '../../../../assets/data';
 import { IHero } from '../../../shared/models/Hero';
 import { DataService } from '../../../shared/services/data.service';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger, state, style, animate, transition, useAnimation } from '@angular/animations';
+import { zoomOut } from 'ng-animate';
 
 
 @Component({
@@ -13,20 +14,16 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   animations: [
-    trigger('buttonState', [
-      transition('void <=> *', []),
-      transition('* <=> *', [
-        style({height: '{{startHeight}}px', opacity: 0}),
-        animate('.5s ease'),
-      ], {params: {startHeight: 0}})
-    ])
+    trigger('zoomOut', [transition('in => out', useAnimation(zoomOut, {
+      params: { timing: 3, delay: 0 }
+    }))])
   ]
 })
 export class HomeComponent implements OnInit {
-  trigger: string;
-  startHeight: number;
-
   heroes: IHero[];
+  showHereo: false;
+
+  
 
   public barChartOptions: ChartOptions = {
     responsive: true,
@@ -60,10 +57,12 @@ export class HomeComponent implements OnInit {
 
   heroClicked(hero: IHero) {
     this.dataService.setSelectedCompetency(hero);
-    this.router.navigate(['/skills']);
+    setTimeout(() => {
+      this.router.navigate(['/skills']);
+    }, 4000);
+    this.showHero = true;
   }
 
-  // events
   public chartClicked({
     event,
     active

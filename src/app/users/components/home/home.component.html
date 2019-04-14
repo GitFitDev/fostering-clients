@@ -1,10 +1,10 @@
-<mat-toolbar [@routeAnimations]="changeState()" color="primary">
+<mat-toolbar color="primary">
   <span>Be Your Hero</span>
 </mat-toolbar>
 <div>
   <mat-grid-list class="hero-grid" cols="2" rowHeight="fit" gutterSize="5px">
-    <mat-grid-tile *ngFor="let hero of heroes">
-      <mat-card color="primary" class="card" (click)="heroClicked(hero)">
+    <mat-grid-tile [@zoomOut]="" *ngFor="let hero of heroes">
+      <mat-card class="card" (click)="heroClicked(hero) =='in' ? 'out':'in'">
         <mat-card-title class="hero-card-title">
           {{ hero.name }}
         </mat-card-title>

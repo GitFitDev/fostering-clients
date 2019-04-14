@@ -10,6 +10,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { ChartsModule } from 'ng2-charts';
+import { trigger, transition, useAnimation } from '@angular/animations';
+import { zoomOut } from 'ng-animate';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

@@ -8,8 +8,5 @@ import { Component } from '@angular/core';
   animations: [ ]
 })
 export class AppComponent {
-  title = 'fostering-client';
-  prepareRoute(outlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-  }
+  title = 'SimplyGreat';
 }
