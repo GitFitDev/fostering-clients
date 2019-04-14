@@ -20,6 +20,7 @@ import { CardListComponent } from './users/components/card-list/card-list.compon
 import { SkillsListComponent } from './users/components/skills-list/skills-list.component';
 import { FABArrowComponent } from './shared/components/fabarrow/fabarrow.component';
 import { AssessmentComponent } from './users/components/assessment/assessment.component';
+import { SupportTools2Component } from './users/components/support-tools2/support-tools2.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AssessmentComponent } from './users/components/assessment/assessment.co
     CardListComponent,
     SkillsListComponent,
     FABArrowComponent,
-    AssessmentComponent
+    AssessmentComponent,
+    SupportTools2Component
   ],
   imports: [
     BrowserModule,
