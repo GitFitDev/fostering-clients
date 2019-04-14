@@ -1,6 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './users/components/home/home.component';
+import { CardListComponent } from './users/components/card-list/card-list.component';
+import { SkillsListComponent } from './users/components/skills-list/skills-list.component';
+import { FABArrowComponent } from './shared/components/fabarrow/fabarrow.component';
+import { AssessmentComponent } from './users/components/assessment/assessment.component';
+import { LandingPageComponent } from './users/landing-page/landing-page.component';
 import {MatButtonModule, MatCheckboxModule, MatCardModule} from '@angular/material';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -11,14 +21,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { LoginComponent } from './users/login/login.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDatepickerModule} from  '@angular/material/datepicker';
+import { RegistrationComponent } from './users/registration/registration.component';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './users/components/home/home.component';
-import { CardListComponent } from './users/components/card-list/card-list.component';
-import { SkillsListComponent } from './users/components/skills-list/skills-list.component';
-import { FABArrowComponent } from './shared/components/fabarrow/fabarrow.component';
-import { AssessmentComponent } from './users/components/assessment/assessment.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +35,10 @@ import { AssessmentComponent } from './users/components/assessment/assessment.co
     CardListComponent,
     SkillsListComponent,
     FABArrowComponent,
-    AssessmentComponent
+    AssessmentComponent,
+    LandingPageComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +55,14 @@ import { AssessmentComponent } from './users/components/assessment/assessment.co
     MatGridListModule,
     MatDividerModule,
     MatTabsModule,
-    ChartsModule
+    ChartsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatProgressSpinnerModule,
+    MatDatepickerModule,
+    LoginComponent,
+    RegistrationComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
