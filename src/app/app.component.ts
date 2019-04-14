@@ -7,6 +7,8 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: []
+
+
 })
 export class AppComponent {
   constructor(

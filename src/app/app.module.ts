@@ -32,6 +32,7 @@ import { SupportTools2Component } from './users/components/support-tools2/suppor
     RegistrationComponent,
     BattleMenuComponent,
     SupportTools2Component
+
   ],
   imports: [
     BrowserModule,
@@ -42,6 +43,7 @@ import { SupportTools2Component } from './users/components/support-tools2/suppor
     FormsModule,
     ReactiveFormsModule,
     MaterialModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
