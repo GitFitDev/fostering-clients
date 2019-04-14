@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Location } from '@angular/common';
+
 import { Router } from '@angular/router';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, BaseChartDirective, Label } from 'ng2-charts';
@@ -121,7 +122,6 @@ export class SkillsListComponent implements OnInit {
   goBack() {
     this._location.back();
   }
-
   battleButtonClicked() {
     this.router.navigate(['/battle-menu']);
   }

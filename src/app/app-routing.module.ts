@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { LandingPageComponent } from './users/components/landing-page/landing-page.component';
 import { HomeComponent } from './users/components/home/home.component';
 import { SkillsListComponent } from './users/components/skills-list/skills-list.component';
@@ -19,11 +20,10 @@ const routes: Routes = [
   { path: 'assessment', component: AssessmentComponent },
   { path: 'battle-menu', component: BattleMenuComponent },
   { path: 'support-tools', component: SupportTools2Component },
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes) ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
