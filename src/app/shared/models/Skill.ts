@@ -5,5 +5,6 @@ export interface ISkill {
   title: string;
   desc: string;
   power: number;
+  dataPoints: any[];
   // phases?: IPhase[];
 }

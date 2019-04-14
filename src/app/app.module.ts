@@ -9,6 +9,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatTabsModule} from '@angular/material/tabs';
 import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -42,6 +43,7 @@ import { AssessmentComponent } from './users/components/assessment/assessment.co
     MatDialogModule,
     MatGridListModule,
     MatDividerModule,
+    MatTabsModule,
     ChartsModule
   ],
   providers: [],
