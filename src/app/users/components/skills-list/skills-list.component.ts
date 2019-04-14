@@ -125,4 +125,8 @@ export class SkillsListComponent implements OnInit {
   battleButtonClicked() {
     this.router.navigate(['/battle-menu']);
   }
+
+  openAssessment() {
+    this.router.navigate(['/support-tools']);
+  }
 }
