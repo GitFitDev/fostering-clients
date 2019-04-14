@@ -14,7 +14,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import {
   MatButtonModule,
   MatCheckboxModule,
-  MatCardModule
+  MatCardModule,
+  MatNativeDateModule,
+  MatInputModule
 } from '@angular/material';
 
 @NgModule({
@@ -33,7 +35,11 @@ import {
     MatFormFieldModule,
     MatProgressSpinnerModule,
     MatDatepickerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatNativeDateModule,
+    MatInputModule
+
+
   ],
   exports: [
     MatToolbarModule,
@@ -50,7 +56,9 @@ import {
     MatFormFieldModule,
     MatProgressSpinnerModule,
     MatDatepickerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatNativeDateModule,
+    MatInputModule
   ]
 })
 export class MaterialModule {}

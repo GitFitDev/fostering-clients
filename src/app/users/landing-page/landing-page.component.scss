@@ -1,20 +1,23 @@
 .container {
-  overflow: hidden;
-  max-height: auto;
-  max-width: auto;
+  background: url("assets/superheroes-background-4.jpg"); 
 }
-div.contain {
-  background-size: contain;
+img.background-page {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-.background-page {
-  background-size: contain; /* Resize the background image to cover the entire container */
-  max-height: stretch;
-  max-width: stretch;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  overflow: hidden;
-  padding: stretch;
+ .mat-app-background {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .spacer {
