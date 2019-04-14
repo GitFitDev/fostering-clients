@@ -3,17 +3,19 @@ import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-card-list',
   templateUrl: './card-list.component.html',
-  styleUrls: ['./card-list.component.scss']
+  styleUrls: ['./card-list.component.scss'],
+  animations: []
 })
 export class CardListComponent implements OnInit {
-  @Input() cardList: [];
+  @Input() cardList: any[];
   @Output() cardClicked: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClick(card) {
-    this.cardClicked.emit(card.title);
+  // emits the object representing the card
+  onClick(card: any) {
+    this.cardClicked.emit(card);
   }
 }

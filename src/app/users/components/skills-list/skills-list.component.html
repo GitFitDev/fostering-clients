@@ -1,3 +1,26 @@
-<p>
-  skills-list works!
-</p>
+<mat-toolbar color="primary">
+  <span>{{ hero.name }} : Skills</span>
+</mat-toolbar>
+
+<div class="container">
+  <img class="hero-image" [src]="hero.image" />
+
+  <mat-tab-group mat-stretch-tabs>
+    <mat-tab class="tab" *ngFor="let skill of skills" label="{{ skill.title }}">
+        <canvas baseChart
+        [datasets]="[ { data: skill.dataPoints, label: 'Strength' } ]"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="lineChartColors"
+        [chartType]="lineChartType"></canvas>
+    </mat-tab>
+    <mat-divider></mat-divider>
+  </mat-tab-group>
+
+  <!-- <app-card-list
+    [cardList]="skills"
+    (cardClicked)="skillClicked($event)"
+  ></app-card-list> -->
+</div>
+
+<app-fabarrow (fabClick)="goBack()"></app-fabarrow>

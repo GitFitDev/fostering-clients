@@ -1,0 +1,15 @@
+.fab-left {
+  float: left;
+  bottom: 15px;
+  left: 15px;
+  z-index: 100;
+  position: fixed;
+}
+
+.fab-right {
+  float: right;
+  right: 15px;
+  z-index: 100;
+  position: fixed;
+  bottom: 15px;
+}

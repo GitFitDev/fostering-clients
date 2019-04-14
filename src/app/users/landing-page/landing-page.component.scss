@@ -1,0 +1,22 @@
+.container {
+  overflow: hidden;
+  max-height: auto;
+  max-width: auto;
+}
+div.contain {
+  background-size: contain;
+}
+.background-page {
+  background-size: contain; /* Resize the background image to cover the entire container */
+  max-height: stretch;
+  max-width: stretch;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  overflow: hidden;
+  padding: stretch;
+}
+
+.spacer {
+  flex: 1 1 auto;
+  }

@@ -1,0 +1,14 @@
+<div class="fab-container">
+  <button mat-fab color="primary"
+  [class.fab-right]="direction === 'forward'"
+  [class.fab-left]="direction === 'back'"
+  (click)="onClick()">
+    <i class="material-icons">
+      <div
+        *ngIf="direction === 'forward'; then forward; else back"
+      ></div>
+      <ng-template #forward>arrow_forward</ng-template>
+      <ng-template #back>arrow_back</ng-template>
+    </i>
+  </button>
+</div>
